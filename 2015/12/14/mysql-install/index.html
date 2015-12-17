@@ -19,8 +19,9 @@
     ~$ sudo apt-get instal">
 <meta property="og:image" content="http://images.cnitblog.com/blog/284122/201505/051355539858515.png">
 <meta property="og:image" content="http://images.cnitblog.com/blog/284122/201505/051355561575886.png">
+<meta property="og:image" content="http://img.blog.csdn.net/20140824103257200?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20140824104228801?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2015-12-15T13:45:52.541Z">
+<meta property="og:updated_time" content="2015-12-17T13:10:53.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下MySQL和phpadmin安装教程">
 <meta name="twitter:description" content="Ubuntu下安装MySQLUbuntu14.04下安装MySQL分为两种方式，一种是安装系统自带的MySQL,版本号一般为5.5.6，另一种是自定义安装，即各种版本的MySQL,官网上最新的版本为5.7.10。
@@ -258,7 +259,7 @@
     ~$ tar -zxvf mysql-server_5.7.10-1ubuntu14.04_amd64.deb-bundle.tar
 </pre>
 
-<p>解压出如下文件<br>1.libmysqlclient20_5.7.10-1ubuntu14.04_amd64.deb;<br>2.libmysqlclient-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>3.libmysqld-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>4.mysql-community-client_5.7.10-1ubuntu14.04_amd64.deb;<br>5.mysql-community-server_5.7.10-1ubuntu14.04_amd64.deb;<br>6.mysql-community-source_5.7.10-1ubuntu14.04_amd64.deb;<br>7.mysql-client_5.7.10-1ubuntu14.04_amd64.deb;<br>8.mysql-community-test_5.7.10-1ubuntu14.04_amd64.deb;<br>9.mysql-common_5.7.10-1ubuntu14.04_amd64.deb;<br>10.mysql-server_5.7.10-1ubuntu14.04_amd64.deb;<br>11.mysql-community_5.7.10-1ubuntu14.04_amd64.changes;<br>12.mysql-testsuite_5.7.10-1ubuntu14.04_amd64.deb;</p>
+<p><strong>解压出如下文件</strong><br>1.libmysqlclient20_5.7.10-1ubuntu14.04_amd64.deb;<br>2.libmysqlclient-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>3.libmysqld-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>4.mysql-community-client_5.7.10-1ubuntu14.04_amd64.deb;<br>5.mysql-community-server_5.7.10-1ubuntu14.04_amd64.deb;<br>6.mysql-community-source_5.7.10-1ubuntu14.04_amd64.deb;<br>7.mysql-client_5.7.10-1ubuntu14.04_amd64.deb;<br>8.mysql-community-test_5.7.10-1ubuntu14.04_amd64.deb;<br>9.mysql-common_5.7.10-1ubuntu14.04_amd64.deb;<br>10.mysql-server_5.7.10-1ubuntu14.04_amd64.deb;<br>11.mysql-community_5.7.10-1ubuntu14.04_amd64.changes;<br>12.mysql-testsuite_5.7.10-1ubuntu14.04_amd64.deb;</p>
 <p>4.安装MySQL<br>首先要安装2个必须的包分别是：libaio1和libmecab2，使用如下命令进行安装</p>
 <pre>
     ~$ sudo apt-get install libaio1
@@ -278,11 +279,9 @@
     ~$ sudo dpkg -i mysql-community-server_5.7.10-1ubuntu14.04_amd64.deb
     ~$ sudo dpkg -i mysql-server_5.7.10-1ubuntu14.04_amd64.deb
 </pre>
-此时MySQL已安装完毕，可使用第一种方法中的登录命令进行登陆
 
-###  **MySQL的卸载**
-MySQL的卸载也很简单，几行命令即可
-
+<p>此时MySQL已安装完毕，可使用第一种方法中的登录命令进行登陆。</p>
+<h3 id="MySQL的卸载"><strong>MySQL的卸载</strong></h3><p>MySQL的卸载也很简单，几行命令即可</p>
 <pre>
     ~$ sudo apt-get autoremove --purge mysql-server-5.0
     ~$ sudo apt-get remove mysql-server
@@ -293,18 +292,17 @@ MySQL的卸载也很简单，几行命令即可
 
 <pre>
     ~$ dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
-    </pre>
+</pre>
 
 <h2 id="Ubuntu14-04中安装phpadmin"><strong>Ubuntu14.04中安装phpadmin</strong></h2><p>phpadmin是MySQL的图形管理界面，对于学习和使用MySQL有很大的用处。<br>1.安装Apache,由于Ubuntu里自带了Apache,安装起来十分方便</p>
 <pre>
     ~$ sudo apt-get install apache2
-    </pre>
+</pre>
 
-<pre><code>安装完毕后，在浏览器中输<span class="emphasis">*入http://localhost/*</span>，界面显示 It works就成功了
-![<span class="link_label">enter description here</span>][<span class="link_reference">3</span>]
-</code></pre><p>对Apache重启的命令</p>
+<p>安装完毕后，在浏览器中输<em>入<a href="http://localhost/" target="_blank" rel="external">http://localhost/</a></em>，界面显示 It works就成功了<br>    <img src="http://img.blog.csdn.net/20140824103257200?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter description here"></p>
+<p>对Apache重启的命令</p>
 <pre>
-~$ sudo /etc/init.d/apache2 restart
+    ~$ sudo /etc/init.d/apache2 restart
 </pre>
 
 <p>2.安装PHP</p>
@@ -312,31 +310,28 @@ MySQL的卸载也很简单，几行命令即可
     ~$ sudo apt-get install php5
     ~$ sudo apt-get install libapache2-mod-php5
     ~$ sudo /etc/init.d/apache2 restart
-    </pre>
+</pre>
 
 <p>由于版本问题现在的网页在html文件夹下，直接放在www文件夹下无法成功。当然这也可以通过配置文件来解决，具体步骤如下</p>
 <pre>
     ~$ sudo gedit /var/www/html/test.php
-    </pre>
+</pre>
 
-<pre><code>添加
-
-<span class="tag">&lt;<span class="title">pre</span>&gt;</span>
+<pre><code>添加如下内容：
 <span class="php"><span class="preprocessor">&lt;?php</span>
     phpinfo();
      <span class="preprocessor">?&gt;</span></span>
-     <span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
 </code></pre><p>保存后，打开 <a href="http://localhost/test.php" target="_blank" rel="external">http://localhost/test.php</a>, 显示PHP配置信息就OK！如图<br><img src="http://img.blog.csdn.net/20140824104228801?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter description here"></p>
 <p>3.安装phpadmin</p>
 <pre>
     ~$ sudo apt-get install phpmyadmin
-    </pre>
+</pre>
 
 <p>安装完成，浏览器访问<em><a href="http://localhost/phpmyadmin" target="_blank" rel="external">http://localhost/phpmyadmin</a></em>并不能打开数据库管理界面，是因为phpmyadmin文件夹不在/var/www/html/文件夹下，这时候用软连接就好</p>
 <pre>
     ~$ cd /var/www//html
     ~$ sudo ln -s /usr/share/phpmyadmin
-    </pre>
+</pre>
 
 <p>再次访问<em><a href="http://localhost/phpmyadmin" target="_blank" rel="external">http://localhost/phpmyadmin</a></em>即可，这里的账号密码是指你的mysql的账号密码(用户名一般是root)。</p>
 
