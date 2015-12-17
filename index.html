@@ -237,10 +237,9 @@
 </pre>
 
 <p><strong>解压出如下文件</strong><br>1.libmysqlclient20_5.7.10-1ubuntu14.04_amd64.deb;<br>2.libmysqlclient-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>3.libmysqld-dev_5.7.10-1ubuntu14.04_amd64.deb;<br>4.mysql-community-client_5.7.10-1ubuntu14.04_amd64.deb;<br>5.mysql-community-server_5.7.10-1ubuntu14.04_amd64.deb;<br>6.mysql-community-source_5.7.10-1ubuntu14.04_amd64.deb;<br>7.mysql-client_5.7.10-1ubuntu14.04_amd64.deb;<br>8.mysql-community-test_5.7.10-1ubuntu14.04_amd64.deb;<br>9.mysql-common_5.7.10-1ubuntu14.04_amd64.deb;<br>10.mysql-server_5.7.10-1ubuntu14.04_amd64.deb;<br>11.mysql-community_5.7.10-1ubuntu14.04_amd64.changes;<br>12.mysql-testsuite_5.7.10-1ubuntu14.04_amd64.deb;</p>
-<p>4.安装MySQL<br>首先要安装2个必须的包分别是：libaio1和libmecab2，使用如下命令进行安装</p>
+<p>4.安装MySQL<br>首先要安装1个必须的包分别是：libaio1，使用如下命令进行安装</p>
 <pre>
-    ~$ sudo apt-get install libaio1
-    ~$ sudo apt-get -f install
+    ~$ sudo apt-get install libaio1  
 </pre>
 
 <p>在Ubuntu终端进入到解压的文件夹，进行MySQL安装，命令如下</p>
@@ -253,6 +252,7 @@
     ~$ sudo dpkg -i mysql-community-client_5.7.10-1ubuntu14.04_amd64.deb
     ~$ sudo dpkg -i mysql-client_5.7.10-1ubuntu14.04_amd64.deb
     ~$ sudo dpkg -i mysql-common_5.7.10-1ubuntu14.04_amd64.deb
+    ~$ sudo apt-get -f install(安装第二个必须的包libmecab2)
     ~$ sudo dpkg -i mysql-community-server_5.7.10-1ubuntu14.04_amd64.deb
     ~$ sudo dpkg -i mysql-server_5.7.10-1ubuntu14.04_amd64.deb
 </pre>
