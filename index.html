@@ -322,7 +322,7 @@
     ~$ apt-get install php5-mcrypt
 </pre>
 
-<p>对于#1146 - Table ‘phpmyadmin.pma_recent’ doesn’t exist错误的解决方法：<br>步骤如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先在/usr/share/doc/phpmyadmin/examples/下找到create_tables.sql.gz</span><br><span class="line">gzip create_tables.sql.gz</span><br><span class="line">编辑文件create<span class="emphasis">_tables.sql，全文替换pma_</span><span class="emphasis">_为pma_</span>（或相反）</span><br><span class="line">在phpmyadmin上导入该数据库文件</span><br></pre></td></tr></table></figure></p>
+<p>对于#1146 - Table ‘phpmyadmin.pma_recent’ doesn’t exist错误的解决方法：<br>步骤如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先在/usr/share/doc/phpmyadmin/examples/下找到create_tables.sql.gz</span><br><span class="line">编辑文件create<span class="emphasis">_tables.sql，全文替换pma_</span><span class="emphasis">_为pma_</span>（或相反）</span><br><span class="line">在phpmyadmin上导入该数据库文件</span><br></pre></td></tr></table></figure></p>
 <p>至此phpadmin配置完毕。</p>
 
       

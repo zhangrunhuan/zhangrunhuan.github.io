@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://images.cnitblog.com/blog/284122/201505/051355561575886.png">
 <meta property="og:image" content="http://img.blog.csdn.net/20140824103257200?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20140824104228801?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2luZ3N6ZWxkYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2015-12-18T09:06:56.232Z">
+<meta property="og:updated_time" content="2015-12-18T09:11:18.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下MySQL和phpadmin安装教程">
 <meta name="twitter:description" content="Ubuntu下安装MySQLUbuntu14.04下安装MySQL分为两种方式，一种是安装系统自带的MySQL,版本号一般为5.5.6，另一种是自定义安装，即各种版本的MySQL,官网上最新的版本为5.7.10。
@@ -345,7 +345,7 @@
     ~$ apt-get install php5-mcrypt
 </pre>
 
-<p>对于#1146 - Table ‘phpmyadmin.pma_recent’ doesn’t exist错误的解决方法：<br>步骤如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先在/usr/share/doc/phpmyadmin/examples/下找到create_tables.sql.gz</span><br><span class="line">gzip create_tables.sql.gz</span><br><span class="line">编辑文件create<span class="emphasis">_tables.sql，全文替换pma_</span><span class="emphasis">_为pma_</span>（或相反）</span><br><span class="line">在phpmyadmin上导入该数据库文件</span><br></pre></td></tr></table></figure></p>
+<p>对于#1146 - Table ‘phpmyadmin.pma_recent’ doesn’t exist错误的解决方法：<br>步骤如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先在/usr/share/doc/phpmyadmin/examples/下找到create_tables.sql.gz</span><br><span class="line">编辑文件create<span class="emphasis">_tables.sql，全文替换pma_</span><span class="emphasis">_为pma_</span>（或相反）</span><br><span class="line">在phpmyadmin上导入该数据库文件</span><br></pre></td></tr></table></figure></p>
 <p>至此phpadmin配置完毕。</p>
 
       
