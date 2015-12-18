@@ -311,6 +311,19 @@
 </pre>
 
 <p>再次访问<em><a href="http://localhost/phpmyadmin" target="_blank" rel="external">http://localhost/phpmyadmin</a></em>即可，这里的账号密码是指你的mysql的账号密码(用户名一般是root)。</p>
+<h3 id="访问phpadmin所遇到的问题">访问phpadmin所遇到的问题</h3><p>安装完phpadmin后，当你输入账号密码进入首页后，下方会提示三个问题：<br>1.使用配置文件中定义的控制用户连接失败。<br>2.phpMyAdmin 高级功能尚未完全设置,部分功能未激活。<br>3.缺少 mcrypt 扩展。<br>对于第一个第二个问题的解决方法是，对/etc/phpmyadmin/config.inc.php重新配置，修改方式如下：</p>
+<pre>
+    ~$ cfg['Servers'][$i]['controluser'] = '用户名';
+    ~$ cfg ['Servers'][$i]['controlpassword'] = '密码';
+</pre>
+
+<p>然后重新打开配置文件将以下用//注释掉的模块都消去注释,并将文件中的模块名后边的pma_单下划线改成pma__两条下划线，保存即可，重启apache2。<br>第三个问题的解决方法：</p>
+<pre>
+    ~$ apt-get install php5-mcrypt
+</pre>
+
+<p>对于#1146 - Table ‘phpmyadmin.pma_recent’ doesn’t exist错误的解决方法：<br>步骤如下<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先在/usr/share/doc/phpmyadmin/examples/下找到create_tables.sql.gz</span><br><span class="line">gzip create_tables.sql.gz</span><br><span class="line">编辑文件create<span class="emphasis">_tables.sql，全文替换pma_</span><span class="emphasis">_为pma_</span>（或相反）</span><br><span class="line">在phpmyadmin上导入该数据库文件</span><br></pre></td></tr></table></figure></p>
+<p>至此phpadmin配置完毕。</p>
 
       
     </div>
